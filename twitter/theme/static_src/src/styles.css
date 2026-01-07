@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Try these specific paths if the catch-all fails */
+@source "../../templates/**/*.html";          /* Theme app templates */
+@source "../../../templates/**/*.html";       /* Root level templates */
+@source "../../../**/templates/**/*.html";    /* Any app-level templates */
