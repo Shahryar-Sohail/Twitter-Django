@@ -39,21 +39,21 @@
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+      <li><a href="{% url 'tweet_list' %}" class="btn btn-warning">Home</a></li>
       <li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
       </li>
-      <li><a>Item 3</a></li>
+ 
     </ul>
   </div>
   <div class="navbar-end">
-    <a class="btn">Button</a>
+    {% if user.is_authenticated %}
+    <form method="post" action="{% url 'logout' %}" class="inline">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-error">Logout --> {{ user.username }} </button>
+    </form>
+    {% else %}
+    <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+    {% endif %}
   </div>
 </div>
         {% block content%}
