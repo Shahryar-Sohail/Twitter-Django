@@ -9,7 +9,7 @@ Tweet
 {% block content %}
 <h1 class="text-5xl text-center text-white">Tweet Index Page</h1>
 
-<a href="{% url 'tweet_create' %}" class="btn btn-primary">Create Tweet</a>
+<a href="{% url 'tweet_create' %}" class="btn btn-primary m-4">Create Tweet</a>
 
 <div class="container mx-auto mt-8 flex flex-wrap gap-4 justify-center">
 {% for tweet in tweets %}

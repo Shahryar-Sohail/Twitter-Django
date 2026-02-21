@@ -20,8 +20,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from django.views.generic import RedirectView
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/tweet/', permanent=True)),
     path("admin/", admin.site.urls),
     path("tweet/", include("tweet.urls")),
     path("accounts/", include("django.contrib.auth.urls")),

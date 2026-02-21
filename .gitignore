@@ -1,1 +1,30 @@
+# Environments
 .venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Database (Keep your local data local!)
+**/db.sqlite3
+
+# Media (User-uploaded tweet images)
+media/
+
+# Static (The collected files)
+staticfiles/
+
+# Environment Variables (Crucial for security)
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Tailwind / Node.js
+node_modules/
+theme/node_modules/
+package-lock.json
+
+# If you want to force Tailwind to rebuild on the server (recommended):
+# theme/static/css/dist/

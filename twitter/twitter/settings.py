@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-bksa9k-23l1v)-72o%pqg$#t3#t8js2dnfaw8--0eodqge%6!m"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['shahryarsohail.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -136,6 +136,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 

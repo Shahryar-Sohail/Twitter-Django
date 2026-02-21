@@ -1,6 +1,40 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<style>
+    /* 1. Style the Input Boxes */
+    form p input {
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        border: 2px solid black !important; /* Forces black outline */
+        border-radius: 0.5rem;
+        background-color: white !important;
+        color: black !important;
+        outline: none;
+    }
+
+    /* 2. Style the Labels (Username, Email, etc.) */
+    form p label {
+        display: block;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 0.25rem;
+    }
+
+    /* 3. Hide the messy "Help Text" (password rules) */
+    .helptext {
+        display: none;
+    }
+    
+    /* 4. Ensure focus state looks good */
+    form p input:focus {
+        border-color: #570df8 !important; /* daisyUI Primary Color */
+        box-shadow: 0 0 0 2px #570df8;
+    }
+</style>
+
 <div class="flex items-center justify-center min-h-[70vh] px-4 py-8">
     <div class="card w-full max-w-md shadow-2xl bg-white border border-gray-200">
         <div class="card-body text-black"> <h2 class="card-title text-2xl font-bold justify-center mb-4 text-black">Create Account</h2>
